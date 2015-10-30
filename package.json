@@ -1,10 +1,12 @@
 {
   "name": "starwars-names-will",
-  "version": "1.4.0-beta.0",
   "description": "Get a random Star Wars names.",
+  "version": "0.0.0-semantically-released",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,15 @@
   "homepage": "https://github.com/willianjusten/starwars-names",
   "dependencies": {
     "unique-random-array": "1.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.4.0",
+    "commitizen": "2.3.0",
+    "cz-conventional-changelog": "1.1.4",
+    "mocha": "2.3.3",
+    "semantic-release": "^4.3.5"
+  },
+  "cZConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
